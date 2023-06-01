@@ -1,0 +1,125 @@
+/* div {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 20px;
+    position: absolute;
+    color: #ffffff;
+    font-family: Arial;
+    text-align: center;
+}
+
+.box {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    animotion-name: myframes;
+    animotion-duration: 2s;
+    animotion-iteration-count: infinite;
+    animotion-timing-function: ease-in-out;
+
+}
+
+@keyframes myframes {
+    0% {
+        top: Opx;
+        left: Opx;
+        background: pink;
+    }
+
+    25% {
+        top: Opx;
+        left: 100px;
+        background: purple;
+    }
+
+    50% {
+        top: 100px;
+        left: 100px;
+        background: black;
+    }
+
+    75% {
+        top: Opx;
+        left: Opx;
+        background: gold;
+    }
+
+}
+ */
+
+#div-1 {
+    background-color: black;
+}
+
+#div-2 {
+    background-color: red;
+    opacity: 0.5;
+    /* transform: translateX(10%);
+    translateY(30px); */
+
+    /* transform: translateX(10px) translateY(30px); */
+
+    /* transform: scaleXs(2) scaleY(0.8); */
+    /* transform: rotate(1turn); */
+    /* transform: skewX(-45deg) skewY(45deg); */
+    /* transform: translate(10px, 20px) scale(0.5); */
+
+    /* transform: perspective(100px) rotateX(45deg) rotateY(15deg); */
+
+    /* transform: perspective(200px) translateZ (20px); */
+    /* transform: rotate(45deg); */
+    /* translate-orgin: center center; */
+    /* transform-origin: 100% 100%; */
+    /* transition-property: transform, color;
+    transition-duration: .3s;
+    transition-delay: 1s;
+    transition-timing-function: ease-in; */
+    /* transition: all .3s ease-in 1s; */
+    /* 
+    animation-name: myAnim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    /* animation-direction: alternate-reverse;
+    animation-fill-mode: both;  
+    animation-play-state: running;
+    */
+    animation: myAnim 3s ease-in-out 1s 1 alternate both;
+}
+
+/* #div-2:hover {
+    /* transform: translateX(250px);
+    /* background-color: aqua; */
+/* color: blue; */
+/* animation-name: myAnim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both; 
+
+} */
+
+@keyframes myAmim {
+    0% {
+        transform: translate(0px);
+        color: white;
+    }
+
+    50% {
+        transform: translate(60px);
+        color: lightskyblue;
+    }
+
+
+    100% {
+        transform: translateX(250px);
+        color: blue;
+    }
+
+}
