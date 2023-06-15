@@ -1,0 +1,357 @@
+	.wrapper{
+			width: 1440px;
+			/* background: aqua; */
+			
+		}
+
+		.redBox{
+			
+			/*  border: 2px solid red;	*/ 
+		}
+
+		.sizeAuto{
+			 
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.logoBox{
+			width: 20%;
+			height: 100%;	
+			float: left!important;
+		}
+
+		.logoImg{
+			display: block;
+		
+			margin-top: 6.4%;
+		    margin-left: 48%;
+
+			display: inline-block;
+			vertical-align: middle;
+			
+		}
+
+		.menuBar{
+			width: 79.0%;
+			height: 100%;
+			
+			float: right!important;
+		}
+
+		.nav{
+			font-size: 0px;
+			width:auto;
+			height: 132px;
+			/* border: 2px solid red;	
+			background: lime; */
+			font-size: 0;
+			text-align: center;
+		}
+
+		.noHover{
+			pointer-events: none;
+		}
+
+		.button{
+			background-color: rgba(0,0,0,0); 
+  			
+  			border: none;
+  			border-radius: none;
+  			color: none;
+  			padding: auto;
+  			text-decoration: none;
+  			font-size: 20px;
+			margin-top: 61.5px;  
+			   
+			 
+
+		}
+
+		li {
+			display: inline; /* Отображать как строчный элемент */
+			margin-right: 60px; /* Отступ слева */
+			
+			}
+
+			.menuIcon{
+				display: inline;	
+			}
+
+			.titulBloc{
+				height: 611px;
+				white-space: nowrap;
+				
+			}
+
+			.descriptionBloc{
+				width: 500px;
+				margin-left: 153px;
+				margin-top: 125px;
+				min-height: 100px;
+				display: inline-block;
+				 
+				
+			}
+
+			.frontSize18{
+				font-size: 18px;
+			}
+ 
+			.descriptionBlocText{
+				
+				font-family: 'Raleway';
+				font-style: normal;
+					font-weight: 600;
+				font-size: 38px;
+				line-height: 82px;
+
+				color: #333333;
+
+			}
+
+			.buttonSale{
+				background-color: red; 
+				font-family:Roboto;
+				border: none;
+				border-radius: 20px;
+				color: none;
+				padding: 20px;
+				text-decoration: none;
+				font-size: 20px;
+			    margin-top: 80px;	
+				margin-left: 20;
+			}
+
+			.backgroundCubeTitulBloc{
+
+
+				 
+
+				background: url('../img/windows-N1YOSWrXQJE-unsplash_1.jpg'); 
+				flex-wrap:nowrap;
+				display: inline-block; 
+			    top: 45px;
+				left: 46px;
+				margin-top: 0px;
+				margin-right: 0px;	
+				position: absolute;	
+				position: relative;
+				z-index: -5;	
+				border-radius: 20px;
+			}
+			
+			
+			.backgroundCubeTitulBlocWithImg{
+
+				
+				background: #C9DCD8;
+				
+				width: 462px;
+				height: 370.31px;
+				float: right!important;
+				
+				flex-wrap:nowrap;
+				display: inline-block;
+
+				text-align: right;
+				margin-top: 55px;
+				margin-right: 125px;	
+				position: relative;
+				z-index: +5;
+				border-radius: 20px;
+						
+			}
+			
+			.buttonNextImg{
+
+			background-color: rgba(0,0,0,0); 
+  			border: none;
+  			border-radius: none;
+  			color: none;
+  			padding: auto;
+  			text-decoration: none;
+  			font-size: 20px;
+			margin-top: 61.5px;  
+			}
+
+
+/* 
+		.test_bg{
+			height: 500px;
+			background:yellow url('../images/images.jpg') no-repeat 50% / cover ;
+			background-attachment: fixed;
+			border: 20px solid rgba(0,0,0,.2);
+			padding: 250px 0 0;
+			background-clip: text;
+			-webkit-background-clip: text;
+			font-size: 550px;
+			font-weight: 800;
+			color: rgba(0,0,0,0);
+
+		}
+
+		.test_bg1{
+			min-height: 300px;
+			outline: 5px solid red;
+			background: red;
+		}
+		.test_bg2{
+			min-height: 300px;
+			outline: 5px solid red;
+			background: blue;
+		}
+		.test_bg3{
+			min-height: 300px;
+			outline: 5px solid red;
+			background: fixed url('../images/images.jpg') 50% / cover;
+			color: #fff;
+			font-size: 50px;
+		}
+		.test_bg4{
+			min-height: 300px;
+			outline: 5px solid red;
+			background: green;
+		}
+		.test_bg5{
+			min-height: 300px;
+			outline: 5px solid red;
+			background: ivory;
+		}
+
+		.soc_menu{
+			text-align: right;
+			font-size: 0;
+		}
+
+		.soc_menu li{
+			display: inline-block;
+			font-size: 35px;
+		}
+
+		.soc_menu li a{
+			width: 84px;
+			height: 84px;
+			display: block;
+			outline: 2px solid red;
+			background: url(../images/social.png);
+			transition: background 1s ease;
+		}
+
+		.soc_menu li+li a{
+			background-position: -84px 0;
+		}
+
+		.soc_menu li+li+li a{
+			background-position: -168px 0;
+		}
+
+		.soc_menu li+li+li+li a{
+			background-position: -252px 0;
+		}
+
+		.soc_menu li+li+li+li+li a{
+			background-position: -336px 0;
+		}
+
+		.soc_menu li:hover a{
+			background-position: 0 -84px;
+		}
+
+		.soc_menu li+li:hover a{
+			background-position: -84px -84px;
+		}
+
+		.soc_menu li+li+li:hover a{
+			background-position: -168px -84px;
+		}
+
+		.soc_menu li+li+li+li:hover a{
+			background-position: -252px -84px;
+		}
+
+		.soc_menu li+li+li+li+li:hover a{
+			background-position: -336px -84px;
+		}
+
+
+
+		.soc_menu2{
+			text-align: right;
+			font-size: 0;
+		}
+
+		.soc_menu2 li{
+			display: inline-block;
+			font-size: 35px;
+		}
+
+		.soc_menu2 li a{
+			display: block;
+			outline: 2px solid red;
+			position: relative;
+			padding: 35px 25px 35px 90px;
+		}
+
+		.soc_menu2 li a:before{
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 84px;
+			height: 84px;
+			background: url(../images/social.png);
+			transition: background 1s ease;
+		}
+
+			
+
+		.soc_menu2 li+li a:before{
+			background-position: -84px 0;
+		}
+
+		.soc_menu2 li+li+li a:before{
+			background-position: -168px 0;
+		}
+
+		.soc_menu2 li+li+li+li a:before{
+			background-position: -252px 0;
+		}
+
+		.soc_menu2 li+li+li+li+li a:before{
+			background-position: -336px 0;
+		}
+
+		.soc_menu2 li:hover a:before{
+			background-position: 0 -84px;
+		}
+
+		.soc_menu2 li+li:hover a:before{
+			background-position: -84px -84px;
+		}
+
+		.soc_menu2 li+li+li:hover a:before{
+			background-position: -168px -84px;
+		}
+
+		.soc_menu2 li+li+li+li:hover a:before{
+			background-position: -252px -84px;
+		}
+
+		.soc_menu2 li+li+li+li+li:hover a:before{
+			background-position: -336px -84px;
+		}
+
+		.test_bg7{
+			min-height: 500px;
+			background: linear-gradient(45deg,blue 50%,yellow 50%);
+		}
+
+		.test_bg8{
+			min-height: 500px;
+			background: radial-gradient(farthest-side circle at 10% 200px,red 95%,yellow 95%);
+		}
+
+
+/*
+
