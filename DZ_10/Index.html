@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script>
+
+        const request = new XMLHttpRequest()
+        request.open('GET', 'https://jsonplaceholder.typicode.com/todos')
+        request.setRequestHeader('Content-Type', 'application/json')
+        request.send()
+
+        request.onload = () => {
+            console.log('идёт загрузка')
+        }
+        request.onerror = () => {
+            console.log('ошибка загрузки')
+            console.log(request)
+        }
+
+        let userArray = '[]'
+
+        request.onreadystatechange = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                console.log('загрузка успешно завершенна')
+                userArray = JSON.parse(request.responseText)
+
+                filtredArr = arrayFiltering(userArray, 2, 3, 6);
+
+
+                functionPrint(filtredArr);
+            }
+        };
+
+
+
+
+        function functionPrint(arr) {
+
+
+
+            functionPrintModule(arr, 0);
+            functionPrintModule(arr, 1);
+            functionPrintModule(arr, 2);
+
+        }
+
+
+        function functionPrintModule(arr, user) {
+            const teg = document.createElement("H1");
+            let userNamber = "";
+            if (user == 0) { userNamber = 2; }
+            if (user == 1) { userNamber = 3; }
+            if (user == 2) { userNamber = 6; }
+
+            const texts = document.createTextNode("To-Do list for user №" + userNamber);
+            teg.appendChild(texts);
+            document.body.appendChild(teg);
+
+
+            const para = document.createElement("ol");
+
+            document.body.appendChild(para);
+
+            para.id = "myList" + user;
+
+            console.log(para);
+
+            const dFrag = document.createDocumentFragment();
+            for (let x in arr[user]) {
+                const li = document.createElement('li');
+                li.textContent = arr[user][x];
+                dFrag.appendChild(li);
+            }
+
+            document.getElementById('myList' + user).appendChild(dFrag);
+        }
+
+
+        function arrayFiltering(arr, userID1, userID2, userID3) {
+
+            let ElsumUser1 = 0, ElsumUser2 = 0, ElsumUser3 = 0;
+            let usersArr = [[], [], []]
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].userId == userID1) { if (ElsumUser1 > 4) { } else { usersArr[0][ElsumUser1] = arr[i].title; } ElsumUser1++; }
+                else if (arr[i].userId == userID2) { if (ElsumUser2 > 4) { } else { usersArr[1][ElsumUser2] = arr[i].title; } ElsumUser2++; }
+                else if (arr[i].userId == userID3) { if (ElsumUser3 > 4) { } else { usersArr[2][ElsumUser3] = arr[i].title; } ElsumUser3++; }
+
+            }
+
+            arr = arr.filter(element => element !== null);
+            console.log(usersArr)
+            return usersArr
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="to-do-list">
+
+    </div>
+
+</body>
+
+</html>

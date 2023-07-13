@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма для покупки</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+
+</head>
+
+<script>
+
+
+    function BtnUP() {
+        let tempValue = document.getElementById('number').value;
+        tempValue++;
+        document.getElementById('number').value++;
+        document.getElementById('products-sum').innerHTML = tempValue * 150;
+        document.getElementById('purchase-amount').innerHTML = tempValue * 150;
+        document.getElementById('quantity').innerHTML = tempValue;
+
+        return true
+    }
+
+    function BtnDU() {
+        if (document.getElementById('number').value > 0) {
+            let tempValue = document.getElementById('number').value;
+            tempValue--;
+            document.getElementById('number').value--;
+            document.getElementById('products-sum').innerHTML = tempValue * 150;
+            document.getElementById('purchase-amount').innerHTML = tempValue * 150;
+            document.getElementById('quantity').innerHTML = tempValue;
+        }
+        return true
+    }
+
+
+
+
+</script>
+
+<body>
+
+    <div class="tabs">
+        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+        <label for="tab-btn-1">Product</label>
+        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+        <label for="tab-btn-2">Contacts</label>
+        <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+        <label for="tab-btn-3">Info</label>
+
+        <div id="content-1">
+            <h1>AirPods Pro</h1>
+            <img src="https://www.istore.ua/upload/iblock/707/apple_airpods_2_bluetooth_3_.webp" alt="AirPods"
+                width="200px" style="display: block; margin-left: auto;
+    margin-right: auto;">
+            <div class="price-column">
+                <h1 class="h2-text">Price: 150$</h1>
+                <div><button class="BtnDU" onclick="javascript:BtnDU()">-</button><input type="number" id="number"
+                        placeholder="0" min="0" value="1"><button class="BtnUP" onclick="javascript:BtnUP()">+</button>
+                </div>
+            </div>
+            <h1 class="h2-text">Products sum: <span id="products-sum">150</span>$</h1>
+        </div>
+        <div id="content-2">
+            <h1>Shipping form</h1>
+            <div class="input-macros">
+                Name
+                <input type="text" placeholder="UserName"
+                    onchange="document.getElementById('UserName').innerHTML=this.value">
+            </div>
+            <div class="input-macros">
+                Surname
+                <input type="text" placeholder="Surname"
+                    onchange="document.getElementById('UserName').innerHTML=this.value">
+            </div>
+            <div class="input-macros">
+                Email
+                <input type="text" placeholder="user.mail.com"
+                    onchange="document.getElementById('Surname').innerHTML=this.value">
+            </div>
+            <div class="input-macros">
+                Phone
+                <input type="text" placeholder="8080102984"
+                    onchange="document.getElementById('mail').innerHTML=this.value">
+            </div>
+            <div class="input-macros">
+                Adress
+                <input type="text" placeholder="Krarkiv"
+                    onchange="document.getElementById('Adress').innerHTML=this.value">
+            </div>
+        </div>
+        <div id="content-3">
+            <div class="content-3">
+                <div class="Product-Info">
+                    <h1>Product Info</h1>
+                    <img src="https://www.istore.ua/upload/iblock/707/apple_airpods_2_bluetooth_3_.webp" alt="AirPods"
+                        width="200px" style="display: block; margin-left: auto; margin-right: auto;">
+                    Name:<span> AriPods Pro</span><br>
+                    Quantity: <span id="quantity">1</span><br>
+                    Purchase amount: <span id="purchase-amount">150</span>$
+                </div>
+                <div class="Contacts-Info">
+                    <h1>Contacts Info</h1>
+                    <div class="input-macros input-macros-no-border">
+                        Name:<span id="UserName">UserName</span>
+                    </div>
+                    <div class="input-macros input-macros-no-border">
+                        Surname:<span id="Surname">Surname</span>
+                    </div>
+                    <div class="input-macros input-macros-no-border">
+                        Email:<span id="mail">user.mail.com</span>
+                    </div>
+                    <div class="input-macros input-macros-no-border">
+                        Phone:<span id="Phone">Phone</span>
+                    </div>
+                    <div class="input-macros input-macros-no-border">
+                        Adress:<span id="Adress">Adress</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
