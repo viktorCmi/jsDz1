@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DZ13</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/script.js"></script>
+
+
+</head>
+
+<script>
+
+
+    function BtnUP() {
+        let tempValue = document.getElementById('number').value;
+        tempValue++;
+        document.getElementById('number').value++;
+        document.getElementById('products-sum').innerHTML = tempValue * 150;
+        document.getElementById('purchase-amount').innerHTML = tempValue * 150;
+        document.getElementById('quantity').innerHTML = tempValue;
+
+        return true
+    }
+
+    function BtnDU() {
+        if (document.getElementById('number').value > 0) {
+            let tempValue = document.getElementById('number').value;
+            tempValue--;
+            document.getElementById('number').value--;
+            document.getElementById('products-sum').innerHTML = tempValue * 150;
+            document.getElementById('purchase-amount').innerHTML = tempValue * 150;
+            document.getElementById('quantity').innerHTML = tempValue;
+        }
+        return true
+    }
+
+
+
+
+</script>
+
+<body>
+
+    <div class="tabs">
+        <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+        <label for="tab-btn-1">Sing in</label>
+        <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+        <label for="tab-btn-2">Sing UP</label>
+
+
+        <div id="content-1">
+
+            <div class="input-macros">
+                Login
+                <input type="text" id="login" placeholder="Login">
+            </div>
+            <div class="input-macros">
+                Password
+                <input type="text" id="password" placeholder="Password"
+                    onchange="document.getElementById('Password').innerHTML=this.value">
+            </div>
+
+            <button id="sign-in">Sing in</button>
+
+        </div>
+        <div id="content-2">
+
+            <div class="input-macros">
+                Login
+                <input type="text" id="new-login" placeholder="Login">
+            </div>
+            <div class="input-macros">
+                Password
+                <input type="text" id="new-password" placeholder="Password">
+            </div>
+            <div class="input-macros">
+                Repeted Password
+                <input type="text" id="new-repeatPassword" placeholder="Repeted Password">
+            </div>
+
+            <button id="sign-up">Sing Up</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
